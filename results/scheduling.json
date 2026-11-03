@@ -1,0 +1,651 @@
+{
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "slack_days": 4,
+  "cap_hours": 3.0,
+  "assignments_per_term": 93,
+  "summary": {
+    "preferred": {
+      "overloaded_days": {
+        "mean": 104.0,
+        "sd": 17.029386365926403
+      },
+      "overloaded_student_days": {
+        "mean": 6045.9,
+        "sd": 1018.9575506369242
+      },
+      "excess_hours": {
+        "mean": 171.29669476519328,
+        "sd": 45.23052006245201
+      },
+      "worst_day": {
+        "mean": 10.304165708118301,
+        "sd": 1.6779084962562967
+      },
+      "mean_peak": {
+        "mean": 7.509875899833877,
+        "sd": 1.0277813652245402
+      },
+      "mean_shift_days": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "moved_share": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "seconds": {
+        "mean": 0.0006409709108993411,
+        "sd": 2.8011566063948997e-05
+      },
+      "objective": {
+        "mean": 10061.435880799576,
+        "sd": 2556.8248587815474
+      }
+    },
+    "advisor": {
+      "overloaded_days": {
+        "mean": 78.7,
+        "sd": 22.17678966847997
+      },
+      "overloaded_student_days": {
+        "mean": 4574.5,
+        "sd": 1349.9357947695141
+      },
+      "excess_hours": {
+        "mean": 70.17248034010314,
+        "sd": 25.41366699224806
+      },
+      "worst_day": {
+        "mean": 6.757619807652094,
+        "sd": 0.7690355690150134
+      },
+      "mean_peak": {
+        "mean": 5.176292964112486,
+        "sd": 0.5563089170479679
+      },
+      "mean_shift_days": {
+        "mean": 1.5674966005652573,
+        "sd": 0.2200924722000806
+      },
+      "moved_share": {
+        "mean": 0.5316675953227319,
+        "sd": 0.06143342161659621
+      },
+      "seconds": {
+        "mean": 0.0415586122777313,
+        "sd": 0.002121004928970356
+      },
+      "objective": {
+        "mean": 4180.078190549641,
+        "sd": 1518.2761835896042
+      }
+    },
+    "planner": {
+      "overloaded_days": {
+        "mean": 66.2,
+        "sd": 23.978323544401512
+      },
+      "overloaded_student_days": {
+        "mean": 3857.1,
+        "sd": 1434.8833715671806
+      },
+      "excess_hours": {
+        "mean": 55.98793445506451,
+        "sd": 20.423682654331937
+      },
+      "worst_day": {
+        "mean": 6.6442267060528835,
+        "sd": 0.6102649602625283
+      },
+      "mean_peak": {
+        "mean": 5.017866067590653,
+        "sd": 0.5128285680465386
+      },
+      "mean_shift_days": {
+        "mean": 1.855872996977117,
+        "sd": 0.2264843416854544
+      },
+      "moved_share": {
+        "mean": 0.6755116423097214,
+        "sd": 0.04960925186628612
+      },
+      "seconds": {
+        "mean": 0.3420685498742387,
+        "sd": 0.06297049814604402
+      },
+      "objective": {
+        "mean": 3360.3861948181343,
+        "sd": 1224.6288102066371
+      }
+    },
+    "optimal": {
+      "overloaded_days": {
+        "mean": 76.3,
+        "sd": 20.312803843881326
+      },
+      "overloaded_student_days": {
+        "mean": 4444.0,
+        "sd": 1208.181360558091
+      },
+      "excess_hours": {
+        "mean": 56.940021448300854,
+        "sd": 21.325682794763857
+      },
+      "worst_day": {
+        "mean": 6.430405052615998,
+        "sd": 0.7805401457768563
+      },
+      "mean_peak": {
+        "mean": 4.96382592365157,
+        "sd": 0.5187508731824593
+      },
+      "mean_shift_days": {
+        "mean": 1.920116384136768,
+        "sd": 0.14676615532412568
+      },
+      "moved_share": {
+        "mean": 0.733633311660659,
+        "sd": 0.05379307115753647
+      },
+      "seconds": {
+        "mean": 60.02815464178566,
+        "sd": 0.007374728819963236
+      },
+      "objective": {
+        "mean": 3411.3932067383657,
+        "sd": 1269.8495397611148
+      }
+    }
+  },
+  "runs": {
+    "preferred": [
+      {
+        "overloaded_days": 112.0,
+        "overloaded_student_days": 5965.0,
+        "excess_hours": 192.29772529604736,
+        "worst_day": 11.767983677494406,
+        "mean_peak": 8.217676135464787,
+        "mean_shift_days": 0.0,
+        "moved_share": 0.0,
+        "seconds": 0.0006626669783145189,
+        "objective": 10215.164691735537
+      },
+      {
+        "overloaded_days": 84.0,
+        "overloaded_student_days": 5044.0,
+        "excess_hours": 151.86881803186662,
+        "worst_day": 10.46402073189259,
+        "mean_peak": 7.040324390512516,
+        "mean_shift_days": 0.0,
+        "moved_share": 0.0,
+        "seconds": 0.0005998329725116491,
+        "objective": 9556.664935175637
+      },
+      {
+        "overloaded_days": 83.0,
+        "overloaded_student_days": 4616.0,
+        "excess_hours": 90.44430352842224,
+        "worst_day": 7.269614597457311,
+        "mean_peak": 5.605892922493525,
+        "mean_shift_days": 0.0,
+        "moved_share": 0.0,
+        "seconds": 0.0005958748515695333,
+        "objective": 5092.122420444321
+      },
+      {
+        "overloaded_days": 106.0,
+        "overloaded_student_days": 5695.0,
+        "excess_hours": 223.32778765132434,
+        "worst_day": 11.862976106792605,
+        "mean_peak": 8.649467213083183,
+        "mean_shift_days": 0.0,
+        "moved_share": 0.0,
+        "seconds": 0.0006583340000361204,
+        "objective": 11978.56978339486
+      },
+      {
+        "overloaded_days": 117.0,
+        "overloaded_student_days": 7595.0,
+        "excess_hours": 196.94415260897637,
+        "worst_day": 11.030525888357891,
+        "mean_peak": 8.181618996485117,
+        "mean_shift_days": 0.0,
+        "moved_share": 0.0,
+        "seconds": 0.0006375000812113285,
+        "objective": 12889.015684062566
+      },
+      {
+        "overloaded_days": 109.0,
+        "overloaded_student_days": 6132.0,
+        "excess_hours": 208.8501799776459,
+        "worst_day": 12.606492287649612,
+        "mean_peak": 8.39878474149665,
+        "mean_shift_days": 0.0,
+        "moved_share": 0.0,
+        "seconds": 0.0006494170520454645,
+        "objective": 11592.600312034403
+      },
+      {
+        "overloaded_days": 114.0,
+        "overloaded_student_days": 6873.0,
+        "excess_hours": 186.0243720863184,
+        "worst_day": 10.67434098221019,
+        "mean_peak": 7.279281391739642,
+        "mean_shift_days": 0.0,
+        "moved_share": 0.0,
+        "seconds": 0.0006447499617934227,
+        "objective": 11623.182907412169
+      },
+      {
+        "overloaded_days": 72.0,
+        "overloaded_student_days": 4564.0,
+        "excess_hours": 86.65074288050444,
+        "worst_day": 7.836910507302845,
+        "mean_peak": 5.7595537482927375,
+        "mean_shift_days": 0.0,
+        "moved_share": 0.0,
+        "seconds": 0.0006712500471621752,
+        "objective": 5596.421486326279
+      },
+      {
+        "overloaded_days": 116.0,
+        "overloaded_student_days": 6719.0,
+        "excess_hours": 201.85229543837687,
+        "worst_day": 10.689511046703506,
+        "mean_peak": 8.219747331413974,
+        "mean_shift_days": 0.0,
+        "moved_share": 0.0,
+        "seconds": 0.0006789581384509802,
+        "objective": 12063.339015936552
+      },
+      {
+        "overloaded_days": 127.0,
+        "overloaded_student_days": 7256.0,
+        "excess_hours": 174.70657015245033,
+        "worst_day": 8.83928125532207,
+        "mean_peak": 7.746412127356634,
+        "mean_shift_days": 0.0,
+        "moved_share": 0.0,
+        "seconds": 0.0006111250258982182,
+        "objective": 10007.277571473449
+      }
+    ],
+    "advisor": [
+      {
+        "overloaded_days": 88.0,
+        "overloaded_student_days": 4592.0,
+        "excess_hours": 74.58698187770852,
+        "worst_day": 6.644083107147445,
+        "mean_peak": 5.476189911391484,
+        "mean_shift_days": 1.6344086021505377,
+        "moved_share": 0.5806451612903226,
+        "seconds": 0.04014545795507729,
+        "objective": 3950.4799985702252
+      },
+      {
+        "overloaded_days": 53.0,
+        "overloaded_student_days": 3336.0,
+        "excess_hours": 54.41583388529925,
+        "worst_day": 6.512942974494861,
+        "mean_peak": 4.628579540882322,
+        "mean_shift_days": 1.5520833333333333,
+        "moved_share": 0.4791666666666667,
+        "seconds": 0.041384082986041903,
+        "objective": 3596.305606812506
+      },
+      {
+        "overloaded_days": 45.0,
+        "overloaded_student_days": 2420.0,
+        "excess_hours": 30.20653285066429,
+        "worst_day": 5.508154455102247,
+        "mean_peak": 4.218604969832541,
+        "mean_shift_days": 1.2580645161290323,
+        "moved_share": 0.44086021505376344,
+        "seconds": 0.03857175004668534,
+        "objective": 1712.2309381638229
+      },
+      {
+        "overloaded_days": 93.0,
+        "overloaded_student_days": 4899.0,
+        "excess_hours": 92.50483593303785,
+        "worst_day": 7.457123834528179,
+        "mean_peak": 5.657136366346983,
+        "mean_shift_days": 1.846938775510204,
+        "moved_share": 0.6020408163265306,
+        "seconds": 0.045532749965786934,
+        "objective": 5025.959060851391
+      },
+      {
+        "overloaded_days": 105.0,
+        "overloaded_student_days": 6816.0,
+        "excess_hours": 89.59122773519785,
+        "worst_day": 6.709953425945724,
+        "mean_peak": 5.382610129047676,
+        "mean_shift_days": 1.3125,
+        "moved_share": 0.5208333333333334,
+        "seconds": 0.041133166057989,
+        "objective": 5877.586990787229
+      },
+      {
+        "overloaded_days": 87.0,
+        "overloaded_student_days": 4805.0,
+        "excess_hours": 93.73757279855207,
+        "worst_day": 8.45407750487179,
+        "mean_peak": 5.683735057548197,
+        "mean_shift_days": 1.504950495049505,
+        "moved_share": 0.5346534653465347,
+        "seconds": 0.04365799995139241,
+        "objective": 5099.0490710382455
+      },
+      {
+        "overloaded_days": 97.0,
+        "overloaded_student_days": 5982.0,
+        "excess_hours": 99.76456700517276,
+        "worst_day": 7.211983192701919,
+        "mean_peak": 5.099499061312124,
+        "mean_shift_days": 1.6145833333333333,
+        "moved_share": 0.5520833333333334,
+        "seconds": 0.040110958041623235,
+        "objective": 6362.087666093881
+      },
+      {
+        "overloaded_days": 40.0,
+        "overloaded_student_days": 2537.0,
+        "excess_hours": 22.443843602858983,
+        "worst_day": 5.985043337482266,
+        "mean_peak": 4.327569635802432,
+        "mean_shift_days": 1.2727272727272727,
+        "moved_share": 0.42424242424242425,
+        "seconds": 0.04289325000718236,
+        "objective": 1487.3453120823524
+      },
+      {
+        "overloaded_days": 88.0,
+        "overloaded_student_days": 5155.0,
+        "excess_hours": 72.49763980221698,
+        "worst_day": 6.641698193343215,
+        "mean_peak": 5.430308512987682,
+        "mean_shift_days": 1.84,
+        "moved_share": 0.58,
+        "seconds": 0.04323674994520843,
+        "objective": 4518.079973965194
+      },
+      {
+        "overloaded_days": 91.0,
+        "overloaded_student_days": 5203.0,
+        "excess_hours": 71.97576791032286,
+        "worst_day": 6.451138050903295,
+        "mean_peak": 5.858696455973413,
+        "mean_shift_days": 1.8387096774193548,
+        "moved_share": 0.6021505376344086,
+        "seconds": 0.03891995782032609,
+        "objective": 4171.657287131555
+      }
+    ],
+    "planner": [
+      {
+        "overloaded_days": 73.0,
+        "overloaded_student_days": 3822.0,
+        "excess_hours": 60.30483084324467,
+        "worst_day": 6.712422105356882,
+        "mean_peak": 5.306011135941578,
+        "mean_shift_days": 1.8279569892473118,
+        "moved_share": 0.6989247311827957,
+        "seconds": 0.22948470804840326,
+        "objective": 3217.5953388558373
+      },
+      {
+        "overloaded_days": 41.0,
+        "overloaded_student_days": 2642.0,
+        "excess_hours": 43.28117189707005,
+        "worst_day": 6.543631765522356,
+        "mean_peak": 4.58100813099925,
+        "mean_shift_days": 1.78125,
+        "moved_share": 0.6145833333333334,
+        "seconds": 0.30832441709935665,
+        "objective": 2892.0844019581823
+      },
+      {
+        "overloaded_days": 29.0,
+        "overloaded_student_days": 1591.0,
+        "excess_hours": 22.099598955963593,
+        "worst_day": 5.8904395944556995,
+        "mean_peak": 4.27722215509376,
+        "mean_shift_days": 1.5698924731182795,
+        "moved_share": 0.6344086021505376,
+        "seconds": 0.2858715408947319,
+        "objective": 1297.815947225791
+      },
+      {
+        "overloaded_days": 84.0,
+        "overloaded_student_days": 4440.0,
+        "excess_hours": 74.97027107918124,
+        "worst_day": 7.736518591024492,
+        "mean_peak": 5.6870933309837035,
+        "mean_shift_days": 2.0,
+        "moved_share": 0.7244897959183674,
+        "seconds": 0.384734750026837,
+        "objective": 4100.803984508178
+      },
+      {
+        "overloaded_days": 94.0,
+        "overloaded_student_days": 6093.0,
+        "excess_hours": 71.97244792201711,
+        "worst_day": 6.216343457829627,
+        "mean_peak": 4.67212134592113,
+        "mean_shift_days": 1.6145833333333333,
+        "moved_share": 0.6666666666666666,
+        "seconds": 0.37184116686694324,
+        "objective": 4680.662271843318
+      },
+      {
+        "overloaded_days": 71.0,
+        "overloaded_student_days": 3862.0,
+        "excess_hours": 69.91317245470981,
+        "worst_day": 7.690936202942952,
+        "mean_peak": 5.306139018092115,
+        "mean_shift_days": 2.01980198019802,
+        "moved_share": 0.7227722772277227,
+        "seconds": 0.47006154200062156,
+        "objective": 3810.5010670425854
+      },
+      {
+        "overloaded_days": 81.0,
+        "overloaded_student_days": 5046.0,
+        "excess_hours": 81.37016998866243,
+        "worst_day": 6.729107814592137,
+        "mean_peak": 4.984562673888536,
+        "mean_shift_days": 1.9375,
+        "moved_share": 0.6770833333333334,
+        "seconds": 0.30803745798766613,
+        "objective": 5228.305832090184
+      },
+      {
+        "overloaded_days": 24.0,
+        "overloaded_student_days": 1518.0,
+        "excess_hours": 18.89669192285601,
+        "worst_day": 5.985043337482266,
+        "mean_peak": 4.26325407109526,
+        "mean_shift_days": 1.494949494949495,
+        "moved_share": 0.5757575757575758,
+        "seconds": 0.38540562498383224,
+        "objective": 1261.3956632915622
+      },
+      {
+        "overloaded_days": 78.0,
+        "overloaded_student_days": 4614.0,
+        "excess_hours": 58.595209364474215,
+        "worst_day": 6.757255558306332,
+        "mean_peak": 5.4537006081729436,
+        "mean_shift_days": 2.13,
+        "moved_share": 0.72,
+        "seconds": 0.32218799996189773,
+        "objective": 3693.0710233801306
+      },
+      {
+        "overloaded_days": 87.0,
+        "overloaded_student_days": 4943.0,
+        "excess_hours": 58.475780122465956,
+        "worst_day": 6.180568633016093,
+        "mean_peak": 5.647548205718254,
+        "mean_shift_days": 2.182795698924731,
+        "moved_share": 0.7204301075268817,
+        "seconds": 0.354736290872097,
+        "objective": 3421.626417985576
+      }
+    ],
+    "optimal": [
+      {
+        "overloaded_days": 83.0,
+        "overloaded_student_days": 4358.0,
+        "excess_hours": 58.06205279791336,
+        "worst_day": 5.799258909304706,
+        "mean_peak": 5.024977361309248,
+        "mean_shift_days": 1.7849462365591398,
+        "moved_share": 0.7204301075268817,
+        "seconds": 60.028534499928355,
+        "objective": 3119.138163285739,
+        "mip_gap": 0.3437039938234795,
+        "optimal": 0.0,
+        "bound": 2047.0779192771984
+      },
+      {
+        "overloaded_days": 59.0,
+        "overloaded_student_days": 3739.0,
+        "excess_hours": 44.046155370532695,
+        "worst_day": 6.7730457147627705,
+        "mean_peak": 4.5892153927164,
+        "mean_shift_days": 1.6666666666666667,
+        "moved_share": 0.625,
+        "seconds": 60.027116290992126,
+        "objective": 2934.374609956853,
+        "mip_gap": 0.2812070503030314,
+        "optimal": 0.0,
+        "bound": 2109.2077814067775
+      },
+      {
+        "overloaded_days": 45.0,
+        "overloaded_student_days": 2426.0,
+        "excess_hours": 20.80478740017266,
+        "worst_day": 5.0235150357821725,
+        "mean_peak": 4.04113276378876,
+        "mean_shift_days": 2.129032258064516,
+        "moved_share": 0.7419354838709677,
+        "seconds": 60.02488016686402,
+        "objective": 1207.0221316219117,
+        "mip_gap": 0.417667596442725,
+        "optimal": 0.0,
+        "bound": 702.8880990542077
+      },
+      {
+        "overloaded_days": 88.0,
+        "overloaded_student_days": 4631.0,
+        "excess_hours": 78.499351830905,
+        "worst_day": 7.614215954002013,
+        "mean_peak": 5.611032198110124,
+        "mean_shift_days": 1.8775510204081634,
+        "moved_share": 0.7142857142857143,
+        "seconds": 60.02702200016938,
+        "objective": 4275.153777923606,
+        "mip_gap": 0.22826514000559983,
+        "optimal": 0.0,
+        "bound": 3299.2852022604056
+      },
+      {
+        "overloaded_days": 95.0,
+        "overloaded_student_days": 6134.0,
+        "excess_hours": 70.14648631430609,
+        "worst_day": 7.64565368374177,
+        "mean_peak": 5.037494473221561,
+        "mean_shift_days": 1.9791666666666667,
+        "moved_share": 0.7604166666666666,
+        "seconds": 60.023003624984995,
+        "objective": 4567.566518213752,
+        "mip_gap": 0.3815771894428996,
+        "optimal": 0.0,
+        "bound": 2824.6873236002493
+      },
+      {
+        "overloaded_days": 86.0,
+        "overloaded_student_days": 4811.0,
+        "excess_hours": 71.60671259054979,
+        "worst_day": 6.59377259831338,
+        "mean_peak": 5.117072256017076,
+        "mean_shift_days": 2.089108910891089,
+        "moved_share": 0.801980198019802,
+        "seconds": 60.04981025005691,
+        "objective": 3913.052798534276,
+        "mip_gap": 0.3061363322919179,
+        "optimal": 0.0,
+        "bound": 2715.1251667263678
+      },
+      {
+        "overloaded_days": 89.0,
+        "overloaded_student_days": 5526.0,
+        "excess_hours": 83.5682392163638,
+        "worst_day": 6.2735748326067124,
+        "mean_peak": 4.9086873039730134,
+        "mean_shift_days": 1.9166666666666667,
+        "moved_share": 0.7291666666666666,
+        "seconds": 60.0257453341037,
+        "objective": 5347.274085688444,
+        "mip_gap": 0.35225426324941067,
+        "optimal": 0.0,
+        "bound": 3486.182541594764
+      },
+      {
+        "overloaded_days": 37.0,
+        "overloaded_student_days": 2349.0,
+        "excess_hours": 18.799045631395284,
+        "worst_day": 5.739614571109596,
+        "mean_peak": 4.228990325059976,
+        "mean_shift_days": 1.7272727272727273,
+        "moved_share": 0.6666666666666666,
+        "seconds": 60.026245791930705,
+        "objective": 1256.2040136356122,
+        "mip_gap": 0.18102014221646343,
+        "optimal": 0.0,
+        "bound": 1028.8057844344012
+      },
+      {
+        "overloaded_days": 83.0,
+        "overloaded_student_days": 4925.0,
+        "excess_hours": 60.1191920063883,
+        "worst_day": 6.729276634139476,
+        "mean_peak": 5.396266284099226,
+        "mean_shift_days": 2.02,
+        "moved_share": 0.77,
+        "seconds": 60.02418262488209,
+        "objective": 3765.0797779162076,
+        "mip_gap": 0.30956428235269917,
+        "optimal": 0.0,
+        "bound": 2599.545558464917
+      },
+      {
+        "overloaded_days": 98.0,
+        "overloaded_student_days": 5541.0,
+        "excess_hours": 63.74819132448154,
+        "worst_day": 6.112122592397389,
+        "mean_peak": 5.683390878220318,
+        "mean_shift_days": 2.010752688172043,
+        "moved_share": 0.8064516129032258,
+        "seconds": 60.025005833944306,
+        "objective": 3729.0661906072546,
+        "mip_gap": 0.4623399515857267,
+        "optimal": 0.0,
+        "bound": 2004.9699085819266
+      }
+    ]
+  }
+}

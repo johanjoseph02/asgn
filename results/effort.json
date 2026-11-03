@@ -1,0 +1,252 @@
+{
+  "0": {
+    "train_assignments": 351,
+    "train_logs": 8334,
+    "test_assignments": 185,
+    "models": {
+      "by kind (median of past logs)": {
+        "assignments": 185,
+        "mae_hours": 1.7320810810810812,
+        "median_abs_log_error": 0.22581683913883152,
+        "p80_coverage": 0.8165988581209142
+      },
+      "quantile model": {
+        "assignments": 185,
+        "mae_hours": 1.547430266946738,
+        "median_abs_log_error": 0.21535611949820904,
+        "p80_coverage": 0.7590750371159927
+      },
+      "quantile model + course calibration": {
+        "assignments": 185,
+        "mae_hours": 1.2464363245950658,
+        "median_abs_log_error": 0.17558846096867758,
+        "p80_coverage": 0.7640040838420488
+      }
+    }
+  },
+  "1": {
+    "train_assignments": 349,
+    "train_logs": 8294,
+    "test_assignments": 171,
+    "models": {
+      "by kind (median of past logs)": {
+        "assignments": 171,
+        "mae_hours": 1.7929824561403507,
+        "median_abs_log_error": 0.20049517988469315,
+        "p80_coverage": 0.813370779652203
+      },
+      "quantile model": {
+        "assignments": 171,
+        "mae_hours": 1.447010969659229,
+        "median_abs_log_error": 0.16376997187043474,
+        "p80_coverage": 0.7722224784402184
+      },
+      "quantile model + course calibration": {
+        "assignments": 171,
+        "mae_hours": 1.2809098820425289,
+        "median_abs_log_error": 0.15696373703606958,
+        "p80_coverage": 0.784273903070685
+      }
+    }
+  },
+  "2": {
+    "train_assignments": 353,
+    "train_logs": 8498,
+    "test_assignments": 178,
+    "models": {
+      "by kind (median of past logs)": {
+        "assignments": 178,
+        "mae_hours": 2.3254494382022477,
+        "median_abs_log_error": 0.31518628873947685,
+        "p80_coverage": 0.8099768052379152
+      },
+      "quantile model": {
+        "assignments": 178,
+        "mae_hours": 2.118987563312915,
+        "median_abs_log_error": 0.26040261883733584,
+        "p80_coverage": 0.7388946730141415
+      },
+      "quantile model + course calibration": {
+        "assignments": 178,
+        "mae_hours": 1.7124782167630024,
+        "median_abs_log_error": 0.1843832008707856,
+        "p80_coverage": 0.7483855039621331
+      }
+    }
+  },
+  "3": {
+    "train_assignments": 368,
+    "train_logs": 8864,
+    "test_assignments": 178,
+    "models": {
+      "by kind (median of past logs)": {
+        "assignments": 178,
+        "mae_hours": 2.690168539325843,
+        "median_abs_log_error": 0.30809558723838837,
+        "p80_coverage": 0.7968847771985252
+      },
+      "quantile model": {
+        "assignments": 178,
+        "mae_hours": 2.553509454344723,
+        "median_abs_log_error": 0.2796636995368196,
+        "p80_coverage": 0.7203684535944439
+      },
+      "quantile model + course calibration": {
+        "assignments": 178,
+        "mae_hours": 2.1802667830279843,
+        "median_abs_log_error": 0.2478270119356462,
+        "p80_coverage": 0.7520273351616354
+      }
+    }
+  },
+  "4": {
+    "train_assignments": 354,
+    "train_logs": 8471,
+    "test_assignments": 186,
+    "models": {
+      "by kind (median of past logs)": {
+        "assignments": 186,
+        "mae_hours": 2.4910215053763443,
+        "median_abs_log_error": 0.301720706839684,
+        "p80_coverage": 0.7881139277916381
+      },
+      "quantile model": {
+        "assignments": 186,
+        "mae_hours": 2.0385164246835323,
+        "median_abs_log_error": 0.25529213714492255,
+        "p80_coverage": 0.7479195327713399
+      },
+      "quantile model + course calibration": {
+        "assignments": 186,
+        "mae_hours": 1.560329954331519,
+        "median_abs_log_error": 0.20514122973032417,
+        "p80_coverage": 0.7491860337197327
+      }
+    }
+  },
+  "5": {
+    "train_assignments": 358,
+    "train_logs": 8609,
+    "test_assignments": 177,
+    "models": {
+      "by kind (median of past logs)": {
+        "assignments": 177,
+        "mae_hours": 2.0480790960451976,
+        "median_abs_log_error": 0.2858006043520754,
+        "p80_coverage": 0.7977895890925117
+      },
+      "quantile model": {
+        "assignments": 177,
+        "mae_hours": 1.8513676092765023,
+        "median_abs_log_error": 0.24128290669065347,
+        "p80_coverage": 0.7723184685852733
+      },
+      "quantile model + course calibration": {
+        "assignments": 177,
+        "mae_hours": 1.6520720901351853,
+        "median_abs_log_error": 0.20538816472605412,
+        "p80_coverage": 0.7716791108503744
+      }
+    }
+  },
+  "6": {
+    "train_assignments": 365,
+    "train_logs": 8743,
+    "test_assignments": 175,
+    "models": {
+      "by kind (median of past logs)": {
+        "assignments": 175,
+        "mae_hours": 2.5202571428571425,
+        "median_abs_log_error": 0.2833624113072646,
+        "p80_coverage": 0.8279771917417721
+      },
+      "quantile model": {
+        "assignments": 175,
+        "mae_hours": 2.180558337276363,
+        "median_abs_log_error": 0.24150876063392515,
+        "p80_coverage": 0.7294180081898394
+      },
+      "quantile model + course calibration": {
+        "assignments": 175,
+        "mae_hours": 1.785822796036903,
+        "median_abs_log_error": 0.18519869181514065,
+        "p80_coverage": 0.7575489668163401
+      }
+    }
+  },
+  "7": {
+    "train_assignments": 367,
+    "train_logs": 8731,
+    "test_assignments": 173,
+    "models": {
+      "by kind (median of past logs)": {
+        "assignments": 173,
+        "mae_hours": 1.6008670520231214,
+        "median_abs_log_error": 0.2359642397432712,
+        "p80_coverage": 0.8120662944719733
+      },
+      "quantile model": {
+        "assignments": 173,
+        "mae_hours": 1.240830869916908,
+        "median_abs_log_error": 0.21080881267749368,
+        "p80_coverage": 0.7428579563515308
+      },
+      "quantile model + course calibration": {
+        "assignments": 173,
+        "mae_hours": 1.0946175098974869,
+        "median_abs_log_error": 0.16150433681321008,
+        "p80_coverage": 0.7638218817899413
+      }
+    }
+  },
+  "8": {
+    "train_assignments": 351,
+    "train_logs": 8442,
+    "test_assignments": 170,
+    "models": {
+      "by kind (median of past logs)": {
+        "assignments": 170,
+        "mae_hours": 2.4143235294117646,
+        "median_abs_log_error": 0.334614960014356,
+        "p80_coverage": 0.7798028861753782
+      },
+      "quantile model": {
+        "assignments": 170,
+        "mae_hours": 2.026661493965842,
+        "median_abs_log_error": 0.2782365122569384,
+        "p80_coverage": 0.7369741769181004
+      },
+      "quantile model + course calibration": {
+        "assignments": 170,
+        "mae_hours": 1.6447600736680037,
+        "median_abs_log_error": 0.21547974968723346,
+        "p80_coverage": 0.7599480726112343
+      }
+    }
+  },
+  "9": {
+    "train_assignments": 353,
+    "train_logs": 8493,
+    "test_assignments": 182,
+    "models": {
+      "by kind (median of past logs)": {
+        "assignments": 182,
+        "mae_hours": 2.453681318681319,
+        "median_abs_log_error": 0.3278259229859135,
+        "p80_coverage": 0.7950004481258341
+      },
+      "quantile model": {
+        "assignments": 182,
+        "mae_hours": 2.2945343113845076,
+        "median_abs_log_error": 0.27596460662814537,
+        "p80_coverage": 0.7314678910591211
+      },
+      "quantile model + course calibration": {
+        "assignments": 182,
+        "mae_hours": 1.8337045357476582,
+        "median_abs_log_error": 0.21247771589139275,
+        "p80_coverage": 0.7562029153023354
+      }
+    }
+  }
+}
