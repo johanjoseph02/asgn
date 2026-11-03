@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Department · Asgn{% endblock %}
+{% block main %}
+<h1>The whole term</h1>
+<section class="card">
+  <h2>Daily coursework, every cohort</h2>
+  {{ chart|safe }}
+  {% include "_legend.html" %}
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Heaviest days still ahead</h2>
+    <table><thead><tr><th>Day</th><th>Cohort</th><th class="num">Hours</th></tr></thead><tbody>
+    {% for h, name, d in crunch %}<tr><td>{{ date_of(d).strftime('%a %d %b') }}</td><td>{{ name }}</td><td class="num">{{ h|round(1) }}</td></tr>
+    {% else %}<tr><td colspan="3" class="muted">No day ahead is over the limit.</td></tr>{% endfor %}
+    </tbody></table>
+  </section>
+  <section class="card">
+    <h2>Draft deadlines ({{ drafts|length }})</h2>
+    <p class="muted">Drafts can still move inside the window their instructor allowed. Published deadlines never move.</p>
+    {% if proposal %}
+      <p>Rebalancing would move {{ proposal.moves|length }} drafts and take the hours over the limit from
+      <b>{{ proposal.before.excess_hours|round(0)|int }}</b> to <b>{{ proposal.after.excess_hours|round(0)|int }}</b>,
+      and the worst day from {{ proposal.before.worst_day|round(1) }} h to {{ proposal.after.worst_day|round(1) }} h.</p>
+      <table><thead><tr><th>Assignment</th><th>From</th><th>To</th></tr></thead><tbody>
+      {% for m in proposal.moves %}<tr><td>{{ m.title }}</td><td>{{ date_of(m['from']).strftime('%d %b') }}</td><td>{{ date_of(m.to).strftime('%d %b') }}</td></tr>{% endfor %}
+      </tbody></table>
+      <form method="post" action="/department/rebalance"><p><button class="primary" type="submit">Apply these moves</button></p></form>
+    {% else %}
+      <p><a href="/department?preview=1">Suggest a better arrangement of the drafts</a></p>
+    {% endif %}
+    <p class="muted">Effort estimates: trained on {{ est.source }}; {{ est.logs }} time logs from students so far.</p>
+  </section>
+</div>
+{% endblock %}

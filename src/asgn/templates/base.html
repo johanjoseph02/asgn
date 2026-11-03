@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Asgn{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  {% if u %}
+  <header>
+    <span class="brand">Asgn</span>
+    <span class="muted">{{ term.name }}</span>
+    <span class="grow"></span>
+    <nav>
+      {% if u.role in ('instructor', 'admin') %}<a href="/instructor">Plan assignments</a>{% endif %}
+      {% if u.role == 'admin' %}<a href="/department">Department</a>{% endif %}
+      {% if u.role == 'student' %}<a href="/student">My workload</a>{% endif %}
+    </nav>
+    <span class="muted">{{ u.name }}</span>
+    <form method="post" action="/logout"><button type="submit">Sign out</button></form>
+  </header>
+  {% endif %}
+  <main>{% block main %}{% endblock %}</main>
+</body>
+</html>

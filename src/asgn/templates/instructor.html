@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Plan assignments · Asgn{% endblock %}
+{% block main %}
+{% if not course %}<p class="card">You are not teaching any courses this term.</p>{% else %}
+<h1>{{ course.code }} · {{ course.name }}</h1>
+<div class="grid two">
+  <section class="card">
+    <h2>Plan a new assignment</h2>
+    <form method="get" action="/instructor">
+      <input type="hidden" name="course" value="{{ course.id }}">
+      {% if courses|length > 1 %}<p class="muted">Other courses: {% for c in courses if c.id != course.id %}<a href="/instructor?course={{ c.id }}">{{ c.code }}</a> {% endfor %}</p>{% endif %}
+      <label for="title">Title</label><input id="title" name="title" value="{{ form.title }}" placeholder="Problem set 4">
+      <div class="row">
+        <div><label for="kind">Kind</label><select id="kind" name="kind">{% for k in KINDS %}<option value="{{ k }}" {% if k == form.kind %}selected{% endif %}>{{ KIND_LABELS[k] }}</option>{% endfor %}</select></div>
+        <div><label for="size">Questions, pages or tasks</label><input id="size" name="size" type="number" min="1" step="1" value="{{ form.size|int }}"></div>
+        <div><label for="weight">Share of final grade (%)</label><input id="weight" name="weight" type="number" min="0" max="100" step="1" value="{{ form.weight|int }}"></div>
+      </div>
+      <div class="row">
+        <div><label for="preferred">Preferred due date</label><input id="preferred" name="preferred" type="date" value="{{ form.preferred }}"></div>
+        <div><label for="flex">Could move by up to (days)</label><input id="flex" name="flex" type="number" min="0" max="14" value="{{ form.flex }}"></div>
+        <div><label for="days">Days students get</label><input id="days" name="days" type="number" min="1" max="60" value="{{ form.days }}"></div>
+      </div>
+      <p><button class="primary" type="submit">Check the load</button></p>
+    </form>
+  </section>
+  <section class="card">
+    <h2>This course's assignments</h2>
+    <table><thead><tr><th>Due</th><th>Title</th><th class="num">Hours</th><th></th></tr></thead><tbody>
+    {% for a in items %}
+      <tr><td>{{ date_of(a.due).strftime('%d %b') }}</td><td>{{ a.title }} <span class="pill {{ a.status }}">{{ a.status }}</span></td>
+        <td class="num">{{ a.est_p50|round(1) }}–{{ a.est_p80|round(1) }}</td>
+        <td>{% if a.status == 'draft' %}
+          <form method="post" action="/instructor/assignments/{{ a.id }}/publish" style="display:inline"><button class="link" type="submit">Publish</button></form> ·
+          <form method="post" action="/instructor/assignments/{{ a.id }}/delete" style="display:inline"><button class="link" type="submit">Delete</button></form>{% endif %}</td></tr>
+    {% else %}<tr><td colspan="4" class="muted">None yet.</td></tr>{% endfor %}
+    </tbody></table>
+  </section>
+</div>
+{% if plan %}
+<section class="card">
+  <h2>Expected effort: {{ plan.p50 }} hours for a typical student, {{ plan.p80 }} for the slowest fifth</h2>
+  <p class="muted">Estimated from the kind, size and weight{% if plan.factor != 1.0 %}, adjusted by {{ plan.factor }}x for how long students have taken on this course's previous work{% endif %}. Model trained on {{ plan.source }}.</p>
+  <h2 style="margin-top:14px">What students already have around then</h2>
+  {{ plan.chart|safe }}
+  {% include "_legend.html" %}
+  <h2 style="margin-top:14px">Due dates, best first</h2>
+  <table><thead><tr><th>Due</th><th class="num">Hours pushed over the limit</th><th class="num">Busiest day for these students</th><th class="num">Days from your choice</th><th></th></tr></thead><tbody>
+  {% for o in plan.options %}
+    <tr {% if loop.first %}class="best"{% endif %}><td>{{ date_of(o.due).strftime('%a %d %b') }}{% if o.due == plan.pref %} (your choice){% endif %}</td>
+      <td class="num">{{ (o.added_excess)|round(0)|int }} student-hours</td><td class="num">{{ o.peak|round(1) }} h</td><td class="num">{{ o.shift }}</td>
+      <td><form method="post" action="/instructor/assignments">
+        <input type="hidden" name="course" value="{{ course.id }}"><input type="hidden" name="title" value="{{ plan.spec.title or 'New assignment' }}">
+        <input type="hidden" name="kind" value="{{ plan.spec.kind }}"><input type="hidden" name="weight" value="{{ plan.spec.weight }}">
+        <input type="hidden" name="size" value="{{ plan.spec.size }}"><input type="hidden" name="days" value="{{ plan.spec.days }}">
+        <input type="hidden" name="due" value="{{ o.due }}"><input type="hidden" name="lo" value="{{ plan.options|map(attribute='due')|min }}"><input type="hidden" name="hi" value="{{ plan.options|map(attribute='due')|max }}">
+        <button type="submit" name="status" value="published" class="{% if loop.first %}primary{% endif %}">Publish</button>
+        <button type="submit" name="status" value="draft">Save as draft</button></form></td></tr>
+  {% endfor %}
+  </tbody></table>
+</section>
+{% endif %}
+{% endif %}
+{% endblock %}

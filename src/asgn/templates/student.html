@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}My workload · Asgn{% endblock %}
+{% block main %}
+<h1>{{ cohort.name }}</h1>
+<section class="grid kpis">
+  <div class="card kpi"><div class="l">Next 7 days</div><div class="v">{{ week|round(0)|int }} h</div><div class="muted">expected coursework</div></div>
+  <div class="card kpi"><div class="l">Heavy days ahead</div><div class="v">{{ crunch|length }}</div><div class="muted">over {{ term.cap_hours }} h in the next 4 weeks</div></div>
+  <div class="card kpi"><div class="l">Due soon</div><div class="v">{{ upcoming|length }}</div><div class="muted">assignments</div></div>
+</section>
+<section class="card">
+  <h2>The next four weeks</h2>
+  {{ chart|safe }}
+  {% include "_legend.html" %}
+  <p class="muted">Dots mark deadlines. <a href="{{ feed }}">Subscribe to these deadlines in your calendar</a>.</p>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Coming up</h2>
+    <table><thead><tr><th>Due</th><th>Assignment</th><th class="num">Expected hours</th></tr></thead><tbody>
+    {% for a in upcoming %}
+      <tr><td>{{ date_of(a.due).strftime('%a %d %b') }}</td><td>{{ a.code }} · {{ a.title }}</td><td class="num">{{ a.est_p50|round(1) }}–{{ a.est_p80|round(1) }}</td></tr>
+    {% else %}<tr><td colspan="3" class="muted">Nothing due.</td></tr>{% endfor %}
+    </tbody></table>
+  </section>
+  <section class="card">
+    <h2>How long did these take you?</h2>
+    <p class="muted">Logging your hours makes the estimates for your courses more accurate for everyone.</p>
+    {% for a in to_log %}
+      <form method="post" action="/log" class="row" style="align-items:end; margin-bottom:8px">
+        <input type="hidden" name="assignment" value="{{ a.id }}">
+        <div><label for="h-{{ a.id }}">{{ a.code }} · {{ a.title }}</label><input id="h-{{ a.id }}" name="hours" type="number" min="0.25" max="200" step="0.25" required placeholder="hours"></div>
+        <div style="flex:0"><button type="submit">Log</button></div>
+      </form>
+    {% else %}<p class="muted">Nothing to log right now.</p>{% endfor %}
+  </section>
+</div>
+{% endblock %}
