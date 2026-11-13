@@ -90,3 +90,7 @@ the gap was that nobody could see the workload building up.
 This repository is a ground-up rewrite (2026) around that conclusion. Visibility comes
 first, for students, instructors and the department; the prediction and the planning
 serve it, and both are measured.
+
+## Licence
+
+The code is released under the [MIT License](LICENSE).
